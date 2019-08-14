@@ -25,7 +25,7 @@ export default {
     return {
       name: '',
       email: '',
-      checkedIn: null
+      checkedIn: false
     }
   },
   methods: {
