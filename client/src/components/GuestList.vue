@@ -36,12 +36,13 @@ export default {
     },
 
     updateCheckin(guest) {
+      const id = guest._id
       const data = {
         name: guest.name,
         email: guest.email,
         checkedIn: !guest.checkedIn
       }
-      GuestServices.putGuest(guest)
+      GuestServices.putGuest(data, id)
         .then((updatedGuest) => eventBus.$emit('guest-updated', updatedGuest))
     }
   }

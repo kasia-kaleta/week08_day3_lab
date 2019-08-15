@@ -20,8 +20,8 @@ export default {
     })
   },
 
-  putGuest(payload) {
-    return fetch(baseURL + payload._id, {
+  putGuest(payload, id) {
+    return fetch(baseURL + id, {
       method: 'PUT',
       body: JSON.stringify(payload),
       headers: { 'Content-Type': 'application/json'}
